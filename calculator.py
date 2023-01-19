@@ -8,7 +8,12 @@ def mul(num1,num2):
     return num1*num2
 
 def div(num1,num2):
-    return num1/num2
+    try:
+        return num1/num2
+    except ZeroDivisionError:
+        print("Division by zero not allowed")
+
+
 
 res_add=add(10,20)
 print(res_add)
@@ -19,9 +24,10 @@ print(res_sub)
 res_mul=mul(10,20)
 print(res_mul)
 
-res_div=div(10,20)
-print(res_div)
+num1 = int(input("Enter num1:"))
+num2 = int(input("Enter num2:"))
+res_div = div(num1,num2)
+print(f"{num1}/{num2}")
 
 
-#token of github
-#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
+
